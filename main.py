@@ -24,20 +24,32 @@ class BinarySearchTree:
         def setRight(self, newRight):
             self.right = newRight
 
+        # Insert something into the tree.
+        def insert(self, val):
+            pass
+
+        # Check if a value is in the tree.
+        def contains(self, val):
+            pass
+
+        # Return all the items in the tree as a sorted list.
+        def toList(self):
+            pass
+
     def __init__(self):
         self.root = None
 
     # Insert something into the tree.
     def insert(self, val):
-        pass
+        self.root.insert(val)
 
     # Check if a value is in the tree.
     def contains(self, val):
-        pass
+        self.root.contains(val)
 
     # Return all the items in the tree as a sorted list.
     def toList(self):
-        pass
+        self.root.toList()
 
 def main():
     s = input("Enter a list of numbers, seperated by spaces: ")
