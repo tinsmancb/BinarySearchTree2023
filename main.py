@@ -41,15 +41,24 @@ class BinarySearchTree:
 
     # Insert something into the tree.
     def insert(self, val):
-        self.root.insert(val)
+        if self.root is None:
+            self.root = self.__Node(val)
+        else:
+            self.root.insert(val)
 
     # Check if a value is in the tree.
     def contains(self, val):
-        self.root.contains(val)
+        if self.root is None:
+            return False
+        else:
+            return self.root.contains(val)
 
     # Return all the items in the tree as a sorted list.
     def toList(self):
-        self.root.toList()
+        if self.root is None:
+            return []
+        else:
+            return self.root.toList()
 
 def main():
     s = input("Enter a list of numbers, seperated by spaces: ")
